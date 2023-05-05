@@ -12,9 +12,7 @@
 
     &:hover{
     background-color: #0056a1;
-    }
-
-    
+    }    
 }
 
 .chatBot {
@@ -35,24 +33,26 @@
     &__close-button {
         margin-left: auto;
         margin-right: 1rem;
-        height: 2rem;
+        height: 1rem;
     }
 
     &__title {
         margin-left: 10rem;
+        font-size: 1.4rem;
+        color: grey;
     }
 
     &__privacyStatement {
         display: flex;
         align-items: center;
         border-bottom: 1px solid lightgrey;
-        box-shadow: 0 0.6rem 0.5rem -0.5rem grey;
-        // box-shadow: 0 0.1rem 0.5rem -0.5rem grey;
-        
-        &__-link {
-            &:visited {
-                
-            }
+        box-shadow: 0 0.1rem 0.5rem 0rem grey;
+        color: #595B5F;
+    }
+
+    &__privacyStatement-link {
+        &:visited {
+            color: #2F6DC8;
         }
     }
     
@@ -92,10 +92,24 @@
     }
 
     &__input-area {
-
+        display: flex;
+        margin: 1rem;
+        padding: 0.5rem;
+        border: 1px solid #A29B9B;
+        border-radius: 0.5rem;
     }
 
     &__input {
+        border: none;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
 
+    &__submit {
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

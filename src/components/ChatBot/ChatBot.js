@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import "./ChatBot.scss";
+import send from "../../assets/send_icon.svg";
+import info from "../../assets/information_icon.svg";
+import close from "../../assets/cross_icon.svg";
+import minimize from "../../assets/cross_icon.svg";
 
 function ChatBot() {
 
@@ -47,22 +51,28 @@ console.log(response)
 
             {!!showChat && <div className="chatBot">
                 <div className='chatBot__nav'>
+
                     <h1 className='chatBot__title'>Chat</h1>
-                    <button className='chatBot__close-button' onClick={() => setShowChat(false)}>🥲</button>
+                    {/* <button className='chatBot__close-button' onClick={() => setShowChat(false)}>🥲</button> */}
+                    <img src={close} alt='close icon' className='chatBot__close-button' onClick={() => setShowChat(false)}></img>
                 </div>
+
                 <div className='chatBot__privacyStatement'>
-                    <div className='chatBot__privacyIcon'>🥲</div>
+                    <img src={info} alt='information icon' className='chatBot__privacyIcon'></img>
                     <p>Conversations are recorded and monitored. Do not leave this window unattended. <a href="" className='chatBot__privacyStatement-link'>View our Privacy Statement</a></p>
                 </div>
+                
                 <div className="chatBot__chat-container">
                     <ul className='chatBot__chatArea'>
                         {conversation.map(m => <li key = {`${Math.random()}`} className="chatBot__text-bubble">{m}</li>)}
                     </ul>
                 </div>
+
                 <form onSubmit={handleClick} className="chatBot__input-area">
-                    <input className='chatBot__input' type='text' placeholder='Type a message...' name='message' onChange={(e) => setMessage(e.target.value)}></input>
-                    <button type='submit'>TEST SUBMIT BUTTON</button>
+                    <input className='chatBot__input' type='text' placeholder='Type a message...' onChange={(e) => setMessage(e.target.value)}></input>
+                    <button type='submit'><img src={send} alt='send message' className='chatBot__submit'></img></button>
                 </form>
+
             </div>
             }
         </>
