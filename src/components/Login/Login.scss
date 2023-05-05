@@ -1,0 +1,74 @@
+.login-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    width: 100%;
+  }
+
+  &__form {
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: white;
+  }
+
+  &__heading {
+    font-family: BentonSans, Helvetica Neue, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    width: fit-content;
+    margin:0 auto 1rem;
+
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 0.8125rem;
+    margin-bottom: 0.3125rem;
+  }
+
+  &__input {
+    margin-bottom: 1rem;
+    background-color: #f7f8f9;
+    border: 1px solid #c8c9c7;
+    border-radius: 0.25rem;
+    min-height: 2.825rem;
+  }
+
+  &__remember {
+    display: inline;
+    font-size: 0.84375rem;
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    border-style: none;
+    color: #fff;
+    background: #006fcf;
+    border-radius: 0.25rem;
+    min-height: 3.125rem;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        background: #1068a5;
+        cursor: pointer;
+    }
+}
+
+&__blue {
+    margin: 0.825rem 0;
+    cursor: pointer;
+    color: #006fcf;
+    font-size: 0.9375rem;
+    font-weight: 400;
+  }
+
+  &__footer {
+    width: 100%;
+  }
+}
