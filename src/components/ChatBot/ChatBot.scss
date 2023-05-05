@@ -1,0 +1,101 @@
+.chatToggle{
+    background-color: #0069c4;
+    width: fit-content;
+    padding:0 1rem;
+    color: white;
+    border-radius: 2rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+    background-color: #0056a1;
+    }
+
+    
+}
+
+.chatBot {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 25rem;
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    &__close-button {
+        margin-left: auto;
+        margin-right: 1rem;
+        height: 2rem;
+    }
+
+    &__title {
+        margin-left: 10rem;
+    }
+
+    &__privacyStatement {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid lightgrey;
+        box-shadow: 0 0.6rem 0.5rem -0.5rem grey;
+        // box-shadow: 0 0.1rem 0.5rem -0.5rem grey;
+        
+        &__-link {
+            &:visited {
+                
+            }
+        }
+    }
+    
+    &__privacyIcon {
+        padding: 1rem;
+    }
+    
+    &__chatArea {
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        overflow: auto;
+        padding-right: 1rem;
+    }
+    
+    &__text-bubble{
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        list-style-type: none;
+        text-align: right;
+        width: 65%;
+
+        &:first-child{
+            display: none;
+        }
+
+        &:nth-child(odd){
+            background-color: #8e9fae;
+        }
+
+        &:nth-child(even){
+            background-color: #0069c4;
+        }
+    }
+
+    &__input-area {
+
+    }
+
+    &__input {
+
+    }
+}
