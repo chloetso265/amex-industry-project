@@ -1,0 +1,77 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  padding: 0;
+}
+
+.App{
+  position: relative;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 10rem;
+    border-top: 1px solid lightgrey;
+  }
+
+  &__button {
+    padding: 0.5rem 1.5rem;
+    background-color: #056ACC;
+    color: white;
+    border-radius: 0.25rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    color: #056ACC;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 10rem;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  &__nav {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    color: #056ACC;
+  }
+
+  &__link {
+    padding-right: 1rem;
+  }
+
+  &__card {
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+  }
+
+  &__icon {
+    width: 5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__label {
+    margin: 0;
+  }
+}
+
