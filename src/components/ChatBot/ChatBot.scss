@@ -64,7 +64,7 @@
         height: 20rem;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-end;
         overflow: auto;
         padding-right: 1rem;
@@ -73,21 +73,40 @@
     &__text-bubble{
         margin: 0.5rem 0;
         padding: 0.5rem;
-        border-radius: 1rem;
+        border-radius: 0.65rem;
+        border: 1px solid #53565A;
         list-style-type: none;
         text-align: right;
-        width: 65%;
+        color: #53565A;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         &:first-child{
             display: none;
         }
 
         &:nth-child(odd){
-            background-color: #8e9fae;
+            // background-color: #8e9fae;
+            align-self: flex-start;
+            &::before{
+                content: url('../../assets/amex_chat_icon.svg');
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                margin-right: 1rem;
+            }
         }
-
+        
         &:nth-child(even){
-            background-color: #0069c4;
+            &::after{
+                content: url('../../assets/leahs_icon.svg');
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                margin-left: 1rem;
+            }
+            // background-color: #0069c4;
         }
     }
 
