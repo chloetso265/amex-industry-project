@@ -1,5 +1,6 @@
 import ChatBot from './components/ChatBot/ChatBot'
 import './App.scss';
+import logo from './assets/logo.svg'
 import icon from './assets/AE_icon.svg'
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
             <span className="header__button">Menu</span>
           </div>
           <div>
-            {/* <img src={logo} alt="logo" /> */}
+            <img src={logo} alt="logo" />
           </div>
           <div className="header__right">
             {/* <img /> */}
