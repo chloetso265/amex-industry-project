@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import "./ChatBot.scss";
+import send from "../../assets/send_icon.svg";
+import info from "../../assets/information_icon.svg";
+import close from "../../assets/cross_icon.svg";
+import minimize from "../../assets/cross_icon.svg";
 
 function ChatBot() {
 
@@ -20,12 +24,12 @@ function ChatBot() {
     // if prompt hasownproperty(message) setConversation(...conversaition )
     function handleClick() {
         if (promptResponse.hasOwnProperty(message)) {
-            setConversation([...conversation, message])
+            setConversation([...conversation, message, promptResponse[message]])
             // setReponse(promptResponse[message]);
             
         }
         
-        setMessage('')
+        // setMessage('')
         // setTimeout(()=>setConversation(promptResponse[message]), 2000)
     }
 
@@ -48,11 +52,13 @@ function ChatBot() {
 
             {!!showChat && <div className="chatBot">
                 <div className='chatBot__nav'>
+
                     <h1 className='chatBot__title'>Chat</h1>
-                    <button className='chatBot__close-button' onClick={() => setShowChat(false)}>🥲</button>
+                    {/* <button className='chatBot__close-button' onClick={() => setShowChat(false)}>🥲</button> */}
+                    <img src={close} alt='close icon' className='chatBot__close-button' onClick={() => setShowChat(false)}></img>
                 </div>
                 <div className='chatBot__privacyStatement'>
-                    <div className='chatBot__privacyIcon'>🥲</div>
+                    <img src={info} alt='information icon' className='chatBot__privacyIcon'></img>
                     <p>Conversations are recorded and monitored. Do not leave this window unattended. <a href="" className='chatBot__privacyStatement-link'>View our Privacy Statement</a></p>
                 </div>
                 <ul className='chatBot__chatArea'>
@@ -60,7 +66,8 @@ function ChatBot() {
                 </ul>
                 <div className="chatBot__input-area">
                     <input className='chatBot__input' type='text' placeholder='Type a message...' onChange={(e) => setMessage(e.target.value)}></input>
-                    <button onClick={handleClick}>TEST SUBMIT BUTTON</button>
+                    {/* <button onClick={handleClick}><img src={send} alt='send message'></img></button> */}
+                    <img src={send} alt='send message' className='chatBot__submit' onClick={handleClick}></img>
                 </div>
             </div>
             }
