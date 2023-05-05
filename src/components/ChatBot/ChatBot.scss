@@ -64,7 +64,10 @@
         height: 20rem;
         display: flex;
         flex-direction: column;
-        align-content: flex-end;
+        justify-content: flex-end;
+        align-items: flex-end;
+        overflow: auto;
+        padding-right: 1rem;
     }
     
     &__text-bubble{
@@ -73,12 +76,18 @@
         border-radius: 1rem;
         list-style-type: none;
         text-align: right;
-        width: 40%;
-        &:nth-child(odd){
-            background-color: #0069c4;
+        width: 65%;
+
+        &:first-child{
+            display: none;
         }
-        &:nth-child(even){
+
+        &:nth-child(odd){
             background-color: #8e9fae;
+        }
+
+        &:nth-child(even){
+            background-color: #0069c4;
         }
     }
 
